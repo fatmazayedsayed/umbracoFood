@@ -17,8 +17,8 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "9ca5130f6eb43299")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "4fdc5d056105094f")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.5")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -135,6 +135,13 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// about_banner
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
+		[ImplementPropertyType("about_banner")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops About_banner => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("about_banner");
+
+		///<summary>
 		/// about_content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
@@ -142,11 +149,25 @@ namespace Umbraco.Web.PublishedModels
 		public virtual global::System.Web.IHtmlString About_content => this.Value<global::System.Web.IHtmlString>("about_content");
 
 		///<summary>
+		/// about_logo
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
+		[ImplementPropertyType("about_logo")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops About_logo => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("about_logo");
+
+		///<summary>
 		/// about_title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
 		[ImplementPropertyType("about_title")]
 		public virtual string About_title => this.Value<string>("about_title");
+
+		///<summary>
+		/// about_video_url
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
+		[ImplementPropertyType("about_video_url")]
+		public virtual string About_video_url => this.Value<string>("about_video_url");
 	}
 
 	/// <summary>Specialist</summary>

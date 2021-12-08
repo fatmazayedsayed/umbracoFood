@@ -51,13 +51,10 @@ add about and specila page to home page
 ------------------
 add data in speical list
 home(add content propertity with type rich text, image)
-
-
-
 ----------------------------------------------------------------------------------------------------------------
 **video #4
 ------------------
-
+about(add logo, video url with validation, banner image)
 ----------------------------------------------------------------------------------------------------------------
 **video #5
 ------------------
