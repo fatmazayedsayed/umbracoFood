@@ -2,6 +2,15 @@
 install umbraco cms for .net
 create local db 
 run the project
+
+model problem add in web config
+ <add key="Umbraco.ModelsBuilder.Enable" value="true"/>
+    <add key="Umbraco.ModelsBuilder.ModelsMode" value="AppData"/>
+    <add key="Umbraco.ModelsBuilder.EnableApi" value="true"/>
+
+
+	change the <add key="Umbraco.ModelsBuilder.ModelsMode" value="PureLive" />
+	to <add key="Umbraco.ModelsBuilder.ModelsMode" value="AppData" />
 ----------------------------------------------------------------------------------------------------------------
 **video #1
 ------------------
@@ -58,6 +67,9 @@ about(add logo, video url with validation, banner image)
 ----------------------------------------------------------------------------------------------------------------
 **video #5
 ------------------
+add chef
+chef list (add slider) display it as a list , edit permissions to add child(chef)
+home add chefList as a child
 
 ----------------------------------------------------------------------------------------------------------------
 **video #1
