@@ -1,5 +1,15 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
-	Layout = "Layout.cshtml";
+    Layout = "Layout.cshtml";
 }
+
+
+
+<!-- Jumbotron, w title -->
+<div class="jumbotron text-center jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-1">Welcome - UmbracoTV</h1>
+        <p>@Model.Value("home_title")</p>
+    </div>
+</div>
