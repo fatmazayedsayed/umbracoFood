@@ -3,8 +3,39 @@ install umbraco cms for .net
 create local db 
 run the project
 ----------------------------
-video #1
+**video #1
 create empty project type (asp.net app .net frameWork)
 install umbraco cms for .net
 create local db 
 run the project
+install umbraco cms on your project
+select customize->add db connection
+click on (No thanks, I do not want to install a starter website) link
+login on your site
+
+on umbraco setting 
+	click on document type 
+			create layout(act as master page)
+	1-layout with items
+		-logo(image picker)
+		-title(textbox)
+	**video #2
+	1-home with items
+		-title(textbox)
+	2-about with items
+		-tite(textbox)
+		-content(richtext)
+	3-spieclist with items
+		-tite(textbox) 
+	click on templete to add pages inhereted from  Layout page
+make home as home page
+clcik on home document type ->permissions click on  allow as root
+	make other pages under home add as a child
+go to vs to include views 
+back to backoffice to build their models
+settings->model builder->genereate if not seen modify webconfig keys
+<add key="Umbraco.ModelsBuilder.ModelsMode" value="AppData" />
+build vs 
+
+copy layout design  from your templete +css , images and adjust passess
+in layout add   @RenderBody() to display pages contents
