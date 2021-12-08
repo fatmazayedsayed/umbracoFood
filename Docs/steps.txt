@@ -60,6 +60,7 @@ add about and specila page to home page
 ------------------
 add data in speical list
 home(add content propertity with type rich text, image)
+and apply them in design 
 ----------------------------------------------------------------------------------------------------------------
 **video #4
 ------------------

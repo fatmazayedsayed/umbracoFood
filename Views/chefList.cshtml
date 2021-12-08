@@ -1,5 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.ChefList>
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
-	Layout = null;
+    Layout = null;
+    var chfListContent = (ContentModels.ChefList)Model.Root();
+
 }

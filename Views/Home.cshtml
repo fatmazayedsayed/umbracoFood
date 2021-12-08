@@ -2,6 +2,8 @@
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
     Layout = "Layout.cshtml";
+    var homeContent = (ContentModels.Home)Model.Root();
+  
 }
 
 
@@ -14,7 +16,7 @@
     </div>
 </div>
 
-
-@Model.Value("home_content")
-
-@Model.Value("home_image")
+<div>
+    @homeContent.Home_content
+</div>
+<img src="@homeContent.Home_image.Url" />

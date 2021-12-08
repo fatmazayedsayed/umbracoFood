@@ -1,14 +1,24 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.About>
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
-	Layout = "Layout.cshtml";
+    Layout = "Layout.cshtml";
+    var aboutContent = (ContentModels.About)Model.Root();
+
 }
 
-@Model.Value("about_title")
+<div class="row">
 
-@Model.Value("about_content")
+    <div class="col-9">
+        @aboutContent.About_title
+    </div>
+    <div class="col-3">
+        <img src="@aboutContent.About_logo.Url"/>
+    </div>
 
-Link: @Model.Value("about_video_url")
-
-
-@Model.Value("about_banner")
+</div>
+<div class="row">
+    @aboutContent.About_content
+</div>
+<div>
+    @aboutContent.About_video_url
+</div>
