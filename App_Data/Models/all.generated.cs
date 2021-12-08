@@ -6,7 +6,7 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "d6f8c7d4f42c9293")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "9ca5130f6eb43299")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -100,6 +100,20 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// home_content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
+		[ImplementPropertyType("home_content")]
+		public virtual global::System.Web.IHtmlString Home_content => this.Value<global::System.Web.IHtmlString>("home_content");
+
+		///<summary>
+		/// home_image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
+		[ImplementPropertyType("home_image")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops Home_image => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("home_image");
 
 		///<summary>
 		/// home_title

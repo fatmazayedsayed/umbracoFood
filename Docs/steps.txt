@@ -49,7 +49,8 @@ add about and specila page to home page
 ----------------------------------------------------------------------------------------------------------------
 **video #3
 ------------------
-
+add data in speical list
+home(add content propertity with type rich text, image)
 
 
 

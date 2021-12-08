@@ -2804,7 +2804,6 @@
     <Content Include="config\HealthChecks.config" />
     <Content Include="config\ClientDependency.config" />
     <Content Include="config\BackOfficeTours\getting-started.json" />
-    <Content Include="App_Data\Logs\UmbracoTraceLog.DESKTOP-TJ2S7VN.20211208.json" />
     <Content Include="App_Data\packages\installedPackages.config" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
