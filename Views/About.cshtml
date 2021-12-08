@@ -4,31 +4,61 @@
     Layout = "Layout.cshtml";
     var chefslst = (ContentModels.ChefList)Model.Root().Children().Where(c => c.IsDocumentType("chefList")).FirstOrDefault();
 
+    string siteURL = "http://www.saganmarketing.com";
+    string twitterUsername = "sergeysagan";
+
 }
+
+ 
+
+ 
+<div id="fb-root"></div>
+<script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s) [0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=196365167049447&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
 <!-- Team Members section -->
 <div class="row section">
     @{
-        foreach (ContentModels.Chef chf in chefslst.Children.Take((int)chefslst.ChefList_number))
+        foreach (ContentModels.Chef chf in chefslst.Children
+
+        .Take((int)chefslst.ChefList_number))
         {
+        
+
+<div class="col-md-3">
+        <div class="teammember">
+            <img class="img-fluid" src="@chf.Chef_photo.Url" />
+            <p>
+                <span class="font-weight-bold">@chf.Chef_title</span><br />
+                <br />
+                <span class="font-weight-bold">Position: </span>   @chf.Chef_position
+            </p>
 
 
-            <div class="col-md-3">
-                <div class="teammember">
-                    <img class="img-fluid" src="@chf.Chef_photo.Url" />
-                    <p>
-                        <span class="font-weight-bold">@chf.Chef_title</span><br />
-                        <br />
-                        <span class="font-weight-bold">Position: </span>   @chf.Chef_position
-                    </p>
-                   
+            <p>
+                <a href="@chf.Chef_twitter">twitter</a>
 
-                    <p>
-                        <a href="@chf.Chef_twitter">twitter</a>
-                         
-                    </p>
-                </div>
+            </p>
+
+            <div class="blogSocialShare" style="line-height: 11px;">
+                <a href="https://twitter.com/share" class="twitter-share-button"
+                   data-url="@(siteURL + Model.Url)" data-text="@Model.Name"
+                   data-via="@twitterUsername" data-count="none">Tweet</a>
+                <div class="fb-like" data-href="@(siteURL + Model.Url)" data-layout="button" data-action="like"
+                     data-show-faces="false" data-share="true"></div>
+                <script type="IN/Share" data-url="@(siteURL + Model.Url)"></script>
             </div>
-        }
+        </div>
+</div>
+}
     }
 </div>
 
