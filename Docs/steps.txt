@@ -1,0 +1,10 @@
+﻿create empty project type (asp.net app .net frameWork)
+install umbraco cms for .net
+create local db 
+run the project
+----------------------------
+video #1
+create empty project type (asp.net app .net frameWork)
+install umbraco cms for .net
+create local db 
+run the project
