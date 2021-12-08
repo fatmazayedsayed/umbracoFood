@@ -2820,7 +2820,6 @@
     <Content Include="config\HealthChecks.config" />
     <Content Include="config\ClientDependency.config" />
     <Content Include="config\BackOfficeTours\getting-started.json" />
-    <Content Include="App_Data\Logs\UmbracoTraceLog.DESKTOP-TJ2S7VN.20211208.json" />
     <Content Include="App_Data\TEMP\ClientDependency\1_2a3584b39a24461f9ca4b1cce3440e7d.cdJ" />
     <Content Include="App_Data\TEMP\ClientDependency\1_34d6a164ffe44acabd2e87a492caf463.cdC" />
     <Content Include="App_Data\TEMP\ClientDependency\1_98b3d65b49ec435aa4ff62208d1b92b3.cdJ" />

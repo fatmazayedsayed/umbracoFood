@@ -2,23 +2,49 @@
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
     Layout = "Layout.cshtml";
-    var aboutContent = (ContentModels.About)Model.Root();
+    var chefslst = (ContentModels.ChefList)Model.Root().Children().Where(c => c.IsDocumentType("chefList")).FirstOrDefault();
 
 }
+<!-- Team Members section -->
+<div class="row section">
+    @{
+        foreach (ContentModels.Chef chf in chefslst.Children.Take((int)chefslst.ChefList_number))
+        {
 
-<div class="row">
 
-    <div class="col-9">
-        @aboutContent.About_title
+            <div class="col-md-3">
+                <div class="teammember">
+                    <img class="img-fluid" src="@chf.Chef_photo.Url" />
+                    <p>
+                        <span class="font-weight-bold">@chf.Chef_title</span><br />
+                        <br />
+                        <span class="font-weight-bold">Position: </span>   @chf.Chef_position
+                    </p>
+                   
+
+                    <p>
+                        <a href="@chf.Chef_twitter">twitter</a>
+                         
+                    </p>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+@*<div class="row">
+
+        <div class="col-9">
+            @aboutContent.About_title
+        </div>
+        <div class="col-3">
+            <img src="@aboutContent.About_logo.Url"/>
+        </div>
+
     </div>
-    <div class="col-3">
-        <img src="@aboutContent.About_logo.Url"/>
+    <div class="row">
+        @aboutContent.About_content
     </div>
-
-</div>
-<div class="row">
-    @aboutContent.About_content
-</div>
-<div>
-    @aboutContent.About_video_url
-</div>
+    <div>
+        @aboutContent.About_video_url
+    </div>*@
