@@ -21,7 +21,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Specialist</summary>
 	[PublishedModel("specialist")]
-	public partial class Specialist : PublishedContentModel
+	public partial class Specialist : PublishedContentModel, INavigations
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -50,5 +50,12 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
 		[ImplementPropertyType("specialist_Title")]
 		public virtual string Specialist_Title => this.Value<string>("specialist_Title");
+
+		///<summary>
+		/// nav_check
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
+		[ImplementPropertyType("nav_check")]
+		public virtual bool Nav_check => global::Umbraco.Web.PublishedModels.Navigations.GetNav_check(this);
 	}
 }

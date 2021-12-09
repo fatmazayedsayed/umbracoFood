@@ -21,7 +21,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel
+	public partial class Home : PublishedContentModel, INavigations
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -64,5 +64,12 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
 		[ImplementPropertyType("home_title")]
 		public virtual string Home_title => this.Value<string>("home_title");
+
+		///<summary>
+		/// nav_check
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
+		[ImplementPropertyType("nav_check")]
+		public virtual bool Nav_check => global::Umbraco.Web.PublishedModels.Navigations.GetNav_check(this);
 	}
 }

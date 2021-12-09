@@ -2805,6 +2805,8 @@
     <Compile Include="App_Data\Models\ItemToDele.generated.cs" />
     <Compile Include="App_Data\Models\Layout.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
+    <Compile Include="App_Data\Models\NavigationFooter.generated.cs" />
+    <Compile Include="App_Data\Models\Navigations.generated.cs" />
     <Compile Include="App_Data\Models\Specialist.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaArticle.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaAudio.generated.cs" />

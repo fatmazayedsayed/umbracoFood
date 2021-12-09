@@ -21,7 +21,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>About</summary>
 	[PublishedModel("about")]
-	public partial class About : PublishedContentModel
+	public partial class About : PublishedContentModel, INavigationFooter, INavigations
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -78,5 +78,19 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
 		[ImplementPropertyType("about_video_url")]
 		public virtual string About_video_url => this.Value<string>("about_video_url");
+
+		///<summary>
+		/// nav_footer: add to footer
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
+		[ImplementPropertyType("nav_footer")]
+		public virtual bool Nav_footer => global::Umbraco.Web.PublishedModels.NavigationFooter.GetNav_footer(this);
+
+		///<summary>
+		/// nav_check
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
+		[ImplementPropertyType("nav_check")]
+		public virtual bool Nav_check => global::Umbraco.Web.PublishedModels.Navigations.GetNav_check(this);
 	}
 }

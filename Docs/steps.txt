@@ -66,14 +66,14 @@ and apply them in design
 ------------------
 about(add logo, video url with validation, banner image)
 ----------------------------------------------------------------------------------------------------------------
-**video #5
+**video #5(display List)
 ------------------
 add chef
 chef list (add slider) display it as a list , edit permissions to add child(chef)
 home add chefList as a child
 
 ----------------------------------------------------------------------------------------------------------------
-**video #6
+**video #6 (Email)
 ------------------
 add contact page(title)
 create ContentForm Class
@@ -84,8 +84,12 @@ add action to send email install paperCut (adjust options to local address)
 https://www.papercut.com/support/resources/manuals/ng-mf/common/topics/sys-notifications-configure-email.html
 
 ----------------------------------------------------------------------------------------------------------------
-**video #1
+**video #7
 ------------------
+dynamic nav bar
+draw menu dynamiclly in layout
+for more validation
+create folder components to restict what pages will be appeared
 
 ----------------------------------------------------------------------------------------------------------------
 **video #1
