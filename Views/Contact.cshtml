@@ -1,0 +1,65 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Contact>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "Layout.cshtml";
+}
+<div class="row section">
+
+    <!-- The Contact form -->
+    @using (Html.BeginUmbracoForm("SubmitForm", "ContentForm", FormMethod.Post))
+    {
+
+
+<div class="col-md-6">
+        <div class="contact-form">
+            <div class="form-group">
+                <label>Name</label>
+                <input id="name" name="name" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input id="email" name="email" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Subject</label>
+                <input id="subject" name="subject" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea id="message" name="message" class="form-control" rows="7"></textarea>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Submit Button">
+        </div>
+    </div>      
+    }
+
+    <!-- Contact details -->
+    <div class="col-md-6">
+        <p>
+            Support is provided to our Umbraco Support customers, who can access support tickets from their profile page.  You can read more about Umbraco Support here.<br />
+            <br />
+            You can always get in touch with Umbraco HQ by giving us a call or sending us an email.
+        </p>
+
+        <h3>Umbraco HQ</h3>
+        <p>
+            <span class="font-weight-bold">Umbraco A/S</span><br />
+            Haubergsvej 1<br />
+            5000 Odense C<br />
+            Denmark
+        </p>
+        <p><span class="font-weight-bold">Phone:</span> +45 70 26 11 62</p>
+        <p><span class="font-weight-bold">Email:</span> <a href="mailto:contact@umbraco.com">contact@umbraco.com</a></p>
+        <p><span class="font-weight-bold">Company Registration Number/cvr:</span> 35866582</p>
+
+        <h4>Umbraco US Office</h4>
+        <p>
+            Umbraco, LLC <br />
+            c/o We Work<br />
+            1422 S Tryon St,<br />
+            Charlotte, NC 28203<br />
+            USA
+        </p>
+        <p><span class="font-weight-bold">Phone (US):</span>  +1.206.445.0048</p>
+    </div>
+</div>

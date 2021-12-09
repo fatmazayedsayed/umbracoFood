@@ -1,0 +1,64 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+	Layout = null;
+ 
+    Response.AddHeader("Content-Type", "text/xml");
+
+    const string DATE_FORMAT = "ddd, dd MMM yyyy hh:mm:ss zzz";
+    const string FEED_TITLE = "Dxred.com Blogs";
+    string FEED_DESCRIPTION = Model.Content.Name + " - Code examples, tips and knowledge sharing";
+    const string UPDATE_PERIOD = "hourly";
+    const int UPDATE_FREQUENCY = 1;
+    const string LANGUAGE = "en-US";
+    const int CONTENT_PREVIEW_LENGTH = 500;
+
+    IEnumerable<BlogPostPage> feedItems = Model.Content.Descendants<about>().Where(x => x.IsVisible()).OrderByDescending(x => x.UpdateDate);
+    DateTime lastBuildDate = (feedItems != null && feedItems.Count() > 0) ? feedItems.Max(x => x.UpdateDate) : DateTime.Now;
+    string feedUrl = ((IPublishedContent)CurrentPage).UrlWithDomain() + "rss";
+}
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+
+    <channel>
+        <title>@FEED_TITLE</title>
+        <atom:link href="@feedUrl" rel="self" type="application/rss+xml" />
+        <link>@Model.Content.UrlWithDomain()</link>
+        <description>@FEED_DESCRIPTION</description>
+        <lastBuildDate>@lastBuildDate.ToString(DATE_FORMAT)</lastBuildDate>
+        <language>@LANGUAGE</language>
+        <sy:updatePeriod>@UPDATE_PERIOD</sy:updatePeriod>
+        <sy:updateFrequency>@UPDATE_FREQUENCY</sy:updateFrequency>
+        
+        <image>
+            <url>@(SiteSettings.Instance.SiteHome.BlogLogo.Url())</url>
+            <title>@FEED_TITLE | @FEED_DESCRIPTION</title>
+            <link>@Model.Content.UrlWithDomain()</link>
+            <width>139</width>
+            <height>81</height>
+        </image>
+
+        @foreach (BlogPostPage item in feedItems)
+        {
+            string articleDescription = Umbraco.Truncate(item.Description, CONTENT_PREVIEW_LENGTH).ToString();
+            @:<item>
+                <title>@(item.Title ?? item.Name)</title>
+                @:<link>
+                    @umbraco.library.NiceUrlWithDomain(item.Id)
+                @:</link>
+                <comments>@umbraco.library.NiceUrlWithDomain(item.Id)#comments</comments>
+                <pubDate>@(item.UpdateDate.ToString(DATE_FORMAT))</pubDate>
+                <dc:creator><![CDATA[@item.CreatorName]]></dc:creator>
+                <category><![CDATA[@item.Parent.Name]]></category>
+                <guid isPermaLink="false">@item.UrlWithDomain()</guid>
+                <description><![CDATA[@articleDescription]]></description>
+                <content:encoded><![CDATA[@item.Content]]></content:encoded>
+            @:</item>
+        }
+    </channel>
+</rss>
+
