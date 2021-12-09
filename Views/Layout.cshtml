@@ -1,9 +1,13 @@
 ﻿@inherits UmbracoViewPage
 @using Umbraco.Core.PropertyEditors
+@using Models = Umbraco.Web.PublishedModels;
+
 @{
     Layout = null;
     var site = Model.Root();
     var siteItem = site.Children.Where(s => s.IsVisible());
+
+    var homePage = (Models.Home)Model.Root();
 }
 <!DOCTYPE HTML>
 <html>
@@ -27,12 +31,12 @@
             <!-- Links -->
             <ul class="navbar-nav">
                 @foreach (var item in siteItem
-               .Where(x =>
-                     x.HasProperty("nav_check")
-                  && x.GetProperty("nav_check").Value().Equals(true))
+.Where(x =>
+         x.HasProperty("nav_check")
+      && x.GetProperty("nav_check").Value().Equals(true))
 
 
-                )
+)
                 {
 
 
@@ -42,6 +46,26 @@
 
                 }
             </ul>
+
+
+
+            @{
+                var links = homePage.Home_navLink;
+                if (links.Any())
+                {
+                    <ul class="navbar-nav">
+                        @foreach (var link in links)
+
+
+                        {
+                            <li class="nav-item (@link.Name==Model.Name)?" active": null)">
+                                <a class="nav-link"  target="_blank" href="@link.Url">@link.Name</a>
+                            </li>
+
+                        }
+                    </ul>
+                }
+            }
         </nav>
     </div>
 
@@ -63,11 +87,11 @@
 
                 <ul class="navbar-nav">
                     @foreach (var item in siteItem
-                   .Where(x =>
-                         x.HasProperty("nav_footer")
-                      && x.GetProperty("nav_footer").Value().Equals(true))
+.Where(x =>
+x.HasProperty("nav_footer")
+&& x.GetProperty("nav_footer").Value().Equals(true))
 
-                    )
+)
                     {
                         <li class="nav-item (@item.IsAncestorOrSelf(Model)?" active": null)">
                             <a class="nav-link" href="@item.Url()">@item.Name</a>
@@ -75,6 +99,7 @@
 
                     }
                 </ul>
+              
                 <div class="text-center">
                     <img src="~/Design/images/arm_with_u_logo.png" class="img-fluid" alt="Arm with Umbraco Logo">
                 </div>

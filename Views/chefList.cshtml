@@ -2,6 +2,13 @@
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
     Layout = null;
-    var chfListContent = (ContentModels.ChefList)Model.Root();
+   // var chefslst = (ContentModels.ChefList)Model.Root().Children().Where(c => c.IsDocumentType("chefList")).FirstOrDefault();
 
 }
+
+<!-- Team Members section -->
+<div class="row section">
+    
+      Display Chef Lsit
+    
+</div>

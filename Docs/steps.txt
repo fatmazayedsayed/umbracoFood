@@ -89,12 +89,16 @@ https://www.papercut.com/support/resources/manuals/ng-mf/common/topics/sys-notif
 dynamic nav bar
 draw menu dynamiclly in layout
 for more validation
-create folder components to restict what pages will be appeared
+create folder components to restict what pages will be appeared(toggel properity)
+then add composition relation to each page you want to add
+in content section update the value
 
 ----------------------------------------------------------------------------------------------------------------
-**video #1
+**video #8
 ------------------
-
+add extrnal links
+in home add new property (multi url picker ) that can add extra links from the site or outside too
+then inside layout draw it
 ----------------------------------------------------------------------------------------------------------------
 **video #1
 ------------------

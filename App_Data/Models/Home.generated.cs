@@ -59,6 +59,13 @@ namespace Umbraco.Web.PublishedModels
 		public virtual global::Umbraco.Core.Models.MediaWithCrops Home_image => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("home_image");
 
 		///<summary>
+		/// Home_navLink
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
+		[ImplementPropertyType("home_navLink")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link> Home_navLink => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link>>("home_navLink");
+
+		///<summary>
 		/// home_title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
