@@ -11,6 +11,9 @@ model problem add in web config
 
 	change the <add key="Umbraco.ModelsBuilder.ModelsMode" value="PureLive" />
 	to <add key="Umbraco.ModelsBuilder.ModelsMode" value="AppData" />
+
+admin row data in db (pass fz12345678)
+check pass file
 ----------------------------------------------------------------------------------------------------------------
 **video #1
 ------------------
@@ -101,9 +104,16 @@ in home add new property (multi url picker ) that can add extra links from the s
 then inside layout draw it.
 take about model builder problem
 ----------------------------------------------------------------------------------------------------------------
-**video #9
+**video #9 (Macros)
 ------------------
-
+Macro acts as partial view
+seetings->templetes->macros->add macro with templete
+back to vs to include it
+backOffice->seetings->macros->you will find it
+add pramaters (2 buttons, 1 toggel)
+check on add to editor
+then in content ->editor->add macro->your macro will be viewed 
+edit macro html for displaying your data
 ----------------------------------------------------------------------------------------------------------------
 **video #1
 ------------------

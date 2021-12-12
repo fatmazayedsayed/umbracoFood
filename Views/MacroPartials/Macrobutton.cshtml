@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{ 
+    var link = Model.MacroParameters["macro_link"].ToString();
+    var caption = Model.MacroParameters["macro_caption"].ToString();
+    var windowOpen = Model.MacroParameters["macro_WindowOpen"].ToString()=="1"?"_blank":"null";
+}
+<div>
+    <a href="@link" target="@windowOpen" class="btn btn-primary" > @caption</a>
+</div>
