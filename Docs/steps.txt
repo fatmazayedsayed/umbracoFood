@@ -98,9 +98,10 @@ in content section update the value
 ------------------
 add extrnal links
 in home add new property (multi url picker ) that can add extra links from the site or outside too
-then inside layout draw it
+then inside layout draw it.
+take about model builder problem
 ----------------------------------------------------------------------------------------------------------------
-**video #1
+**video #9
 ------------------
 
 ----------------------------------------------------------------------------------------------------------------
