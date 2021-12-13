@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.FeedbackList>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "Layout.cshtml";
+    var feedlist = (ContentModels.FeedbackList)Model.Root().Children().Where(c => c.IsDocumentType("feedbackList")).FirstOrDefault();
+}
+<!-- Team Members section -->
+<div class="row section">
+    @{
+        foreach (ContentModels.FeedbackItem item in feedlist.Children)
+        {
+            <div class="col-md-3">
+                <div class="teammember">
+                    <p>
+                        <span class="font-weight-bold">@item.Feedback_title</span><br />
+                    </p>
+                    <p>
+                        <span class="font-weight-bold">@item.Feedback_message</span><br />
+                    </p>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+customer:feedback 
+@Model.Value("feedback_content")

@@ -149,5 +149,16 @@ add multi choise properity to add condition on the form
 edit email->enable condition->add condition if personal data=email
 add new page in side the form
 ----------------------------------------------------------------------------------------------------------------
-**video #14
+**video #14(export form data + work flow)
 ------------------
+add feedback item + fedback list like chef & chefs remember to add option (add to navigation)
+then add form to collect data
+in feedbakList add editor to add the form inside it
+remember to add feed back content as a value (test and make sure all are fine)
+back to the form and click on configure work flow
+select Save as Umbraco content node 
+give name
+select document type
+select publish (publish form submisstion directly without need the admin to approve it)->test
+actual data will be saved in 2 places (form itself + document type you already added under it)
+
