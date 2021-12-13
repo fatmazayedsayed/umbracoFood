@@ -141,8 +141,13 @@ publish form->add data ->submit the form
 where is the submitted data
 back to backOffice->forms->click on contact form->you see your submitted data
 ----------------------------------------------------------------------------------------------------------------
-**video #13
+**video #13(forms#2)
 ------------------
+forms->create empty form with(full name, email, phone)
+add it in contact page
+add multi choise properity to add condition on the form
+edit email->enable condition->add condition if personal data=email
+add new page in side the form
 ----------------------------------------------------------------------------------------------------------------
 **video #14
 ------------------
