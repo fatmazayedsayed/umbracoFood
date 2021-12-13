@@ -128,5 +128,21 @@ add new macro (add property content type/numeric)
 in content type add properity editor
 then add macro inside it
 ----------------------------------------------------------------------------------------------------------------
-**video #12
+**video #12(umbraco forms)
+------------------
+nice and customized interface/workFlow steps/reports and exporting(paid)
+installl umbraco forms(backOfice->forms->install)
+forms->create form->contact form->save
+content section->in contact form->add macro->select form (level script off)
+on run it givers you error message(Umbraco Forms requires a validation framework to run, please read documentation for posible options.)
+that there are some  missed scripts you have to add(add them inside layout or enable it)
+edit again macro and enable the script
+publish form->add data ->submit the form
+where is the submitted data
+back to backOffice->forms->click on contact form->you see your submitted data
+----------------------------------------------------------------------------------------------------------------
+**video #13
+------------------
+----------------------------------------------------------------------------------------------------------------
+**video #14
 ------------------
