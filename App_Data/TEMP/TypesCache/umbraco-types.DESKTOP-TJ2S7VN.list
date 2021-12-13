@@ -626,6 +626,7 @@ Umbraco.Web.PublishedModels.Home, umbracoFood, Version=0.0.0.0, Culture=neutral,
 Umbraco.Web.PublishedModels.Image, umbracoFood, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.ItemToDele, umbracoFood, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Layout, umbracoFood, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.Meal, umbracoFood, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Member, umbracoFood, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.NavigationFooter, umbracoFood, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Navigations, umbracoFood, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null

@@ -115,5 +115,14 @@ check on add to editor
 then in content ->editor->add macro->your macro will be viewed 
 edit macro html for displaying your data
 ----------------------------------------------------------------------------------------------------------------
-**video #1
+**video #10(maco example#2)
+------------------
+add new document type with properites (image,name, tage, desc,price)
+specialist type add child Meal
+edit the content to add data
+----------------------------------------------------------------------------------------------------------------
+**video #11
+------------------
+----------------------------------------------------------------------------------------------------------------
+**video #12
 ------------------

@@ -2804,6 +2804,7 @@
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\ItemToDele.generated.cs" />
     <Compile Include="App_Data\Models\Layout.generated.cs" />
+    <Compile Include="App_Data\Models\Meal.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
     <Compile Include="App_Data\Models\NavigationFooter.generated.cs" />
     <Compile Include="App_Data\Models\Navigations.generated.cs" />
@@ -2964,6 +2965,7 @@
     <Content Include="Views\FeedTemp.cshtml" />
     <Content Include="Views\Contact.cshtml" />
     <Content Include="Views\MacroPartials\Macrobutton.cshtml" />
+    <Content Include="Views\Meal.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
