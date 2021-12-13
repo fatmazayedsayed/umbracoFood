@@ -1,0 +1,40 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@using ContentModels = Umbraco.Web.PublishedModels;
+
+@{
+    var pageId = Model.MacroParameters["macro_menu_page"].ToString();
+    var itemCount = Convert.ToInt32(Model.MacroParameters["macro_menu_numberOfItems"].ToString());
+
+    var pageContent = Umbraco.Content(pageId);
+    var menuContent = pageContent.Children().Where(x => x.IsVisible()).Take(itemCount);
+}
+
+<div class="row section">
+
+    @{
+        var comma = ",";
+
+        foreach (ContentModels.Meal item in menuContent)
+        {
+
+            <div class="col-md-3">
+                <div class="teammember">
+                    <img class="img-fluid" src="@item.Meal_Image.Url" />
+                    <p>
+                        <span class="font-weight-bold">@item.Meal_Name</span><br />
+                        <br />
+                        <span class="font-weight-bold">Description: </span>   @item.Meal_description
+                    </p>
+                    <p>Type:@item.Meal_dropdown</p>
+                    @foreach (var tag in item.Meal_tags)
+                    {
+                        <span>@tag</span>
+                        comma = tag != item.Meal_tags.Last() ? "," : "";
+                        @comma;
+                    }
+                </div>
+            </div>
+        }
+    }
+
+</div>

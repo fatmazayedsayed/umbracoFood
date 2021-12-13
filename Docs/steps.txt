@@ -121,8 +121,12 @@ add new document type with properites (image,name, tage, desc,price)
 specialist type add child Meal
 edit the content to add data
 ----------------------------------------------------------------------------------------------------------------
-**video #11
+**video #11(maco example#3)
 ------------------
+we want to select page to display and number of items per page
+add new macro (add property content type/numeric)
+in content type add properity editor
+then add macro inside it
 ----------------------------------------------------------------------------------------------------------------
 **video #12
 ------------------

@@ -45,6 +45,13 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// contact_content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
+		[ImplementPropertyType("contact_content")]
+		public virtual global::System.Web.IHtmlString Contact_content => this.Value<global::System.Web.IHtmlString>("contact_content");
+
+		///<summary>
 		/// contact_title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.17.1")]
